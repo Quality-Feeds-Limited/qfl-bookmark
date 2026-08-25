@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QFL Extension Finder</title>
+<link rel="icon" href="https://qfl.com.bd/wp-content/uploads/2023/03/Q-Logo-Quality-Feed-Limited-favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* QFL brand palette - identical to bookmark.html so the two pages match */
+    --qfl-green:#00843F; --qfl-green-dark:#006732; --qfl-accent:#4EB02A;
+    --qfl-secondary:#54595F; --qfl-text:#7A7A7A;
+
+    --bg:#f4f6f4; --card:#ffffff; --surface-hover:#f1f7f1;
+    --ink:#1f2a23; --muted:#6b736c;
+    --line:#e1e6e1; --brand:var(--qfl-green); --brand-soft:#e6f4ec;
+    --danger:#c0392b; --ok:var(--qfl-green);
+    --shadow:0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+    --shadow-hover:0 6px 18px rgba(0,132,63,.14);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.5 "Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+       -webkit-font-smoothing:antialiased}
+
+  header{background:linear-gradient(135deg,var(--qfl-green) 0%,var(--qfl-green-dark) 100%);
+         color:#fff;padding:14px 20px;
+         display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  header .titles{flex:1 1 auto;min-width:200px}
+  header h1{margin:0;font-size:19px;letter-spacing:.2px;
+            font-family:"Roboto Slab",Georgia,serif;font-weight:600}
+  header p{margin:2px 0 0;font-size:12.5px;opacity:.8}
+  #adminLink{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.28);
+             font-size:12.5px;padding:6px 12px;border-radius:20px;cursor:pointer;font-weight:600}
+  #adminLink:hover{background:rgba(255,255,255,.26)}
+
+  .mainnav{display:flex;gap:8px;flex:0 0 auto}
+  .mainnav a{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.28);
+             text-decoration:none;font-size:12.5px;font-weight:600;
+             padding:6px 14px;border-radius:20px;white-space:nowrap}
+  .mainnav a:hover{background:rgba(255,255,255,.26)}
+  .mainnav a.active{background:#fff;color:var(--brand);border-color:#fff}
+
+  .wrap{max-width:1050px;margin:0 auto;padding:18px 16px 60px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;
+         box-shadow:var(--shadow);padding:14px;margin-bottom:16px}
+
+  .adminbar{display:none;background:#fff8e1;border:1px solid #f0dfa8;color:#7a5c00;
+            border-radius:10px;padding:10px 14px;margin-bottom:16px;
+            align-items:center;gap:10px;font-size:13.5px;font-weight:600;flex-wrap:wrap}
+  body.admin .adminbar{display:flex}
+  .adminbar .spacer{flex:1}
+  .adminbar button{padding:6px 12px;font-size:12.5px}
+
+  .searchrow{display:flex;gap:10px;flex-wrap:wrap}
+  #q{flex:1 1 320px;font-size:17px;padding:12px 14px;border:2px solid var(--line);
+     border-radius:8px;outline:none}
+  #q:focus{border-color:var(--qfl-accent);box-shadow:0 0 0 3px rgba(78,176,42,.15)}
+  select,input,button{font-family:inherit;font-size:14px}
+  select{padding:11px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;min-width:170px}
+  button{cursor:pointer;border-radius:8px;border:1px solid transparent;padding:11px 16px;font-weight:600}
+  button[disabled]{opacity:.6;cursor:default}
+  .primary{background:var(--brand);color:#fff}
+  .primary:hover:not([disabled]){background:var(--qfl-green-dark)}
+  .ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+  .ghost:hover:not([disabled]){background:var(--surface-hover);border-color:var(--qfl-accent)}
+  .count{font-size:13px;color:var(--muted);margin:10px 2px 0}
+
+  /* Add button + the whole actions column only exist in admin mode */
+  #addBtn{display:none}
+  body.admin #addBtn{display:inline-block}
+  .acts{display:none}
+  body.admin .acts{display:table-cell}
+
+  table{width:100%;border-collapse:collapse;background:var(--card)}
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#f7faf7;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+  tbody tr:hover{background:var(--surface-hover)}
+  tbody tr:last-child td{border-bottom:none}
+  .ext{font-weight:700;font-size:17px;color:var(--brand);white-space:nowrap;cursor:pointer}
+  .ext:hover{text-decoration:underline}
+  .dept{display:inline-block;background:var(--brand-soft);color:var(--brand);
+        padding:2px 8px;border-radius:20px;font-size:11.5px;font-weight:600}
+  td.acts{white-space:nowrap;text-align:right}
+  td.acts button{padding:5px 10px;font-size:12.5px;font-weight:600}
+  .del{background:#fff;color:var(--danger);border-color:#f0d5d1}
+  .del:hover{background:#fdf1f0}
+  mark{background:#fff2a8;padding:0 1px;border-radius:2px}
+  .empty{padding:36px 16px;text-align:center;color:var(--muted)}
+
+  .overlay{position:fixed;inset:0;background:rgba(31,42,35,.45);display:none;
+           align-items:center;justify-content:center;padding:16px;z-index:20}
+  .overlay.on{display:flex}
+  .modal{background:#fff;border-radius:12px;width:100%;max-width:420px;padding:20px}
+  .modal.narrow{max-width:360px}
+  .modal h2{margin:0 0 4px;font-size:17px}
+  .modal .hint{margin:0 0 10px;font-size:12.5px;color:var(--muted)}
+  label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin:10px 0 4px}
+  .modal input{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px}
+  .modal input:focus{outline:none;border-color:var(--brand)}
+  #r_otp{font-size:24px;letter-spacing:8px;text-align:center;font-weight:700}
+  .modalacts{display:flex;gap:8px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
+  .linkbtn{background:none;border:none;color:var(--brand);font-size:12.5px;padding:0;
+           text-decoration:underline;font-weight:600;cursor:pointer}
+  .err{color:var(--danger);font-size:13px;margin-top:10px;min-height:18px}
+  .note{background:var(--brand-soft);color:var(--ok);border-radius:8px;padding:9px 11px;
+        font-size:12.5px;margin-top:10px;display:none}
+  .note.on{display:block}
+  .step{display:none}
+  .step.on{display:block}
+
+  #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);
+         background:var(--ink);color:#fff;padding:11px 18px;border-radius:8px;font-size:14px;
+         opacity:0;transition:.25s;z-index:30;max-width:90vw;text-align:center}
+  #toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  @media(min-width:641px){ .sm-only{display:none} }
+  @media(max-width:640px){ .hide-sm{display:none} td.acts{text-align:left} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="titles">
+    <h1>Quality Feeds Limited &mdash; IP Phone Extension Finder</h1>
+    <p>Head Office &amp; Sister Concerns</p>
+  </div>
+  <nav class="mainnav">
+    <a href="/phonebook" class="active">PhoneBook</a>
+    <a href="/">Bookmark</a>
+  </nav>
+  <button id="adminLink">Admin</button>
+</header>
+
+<div class="wrap">
+
+  <div class="adminbar">
+    <span>&#128275; Admin mode is on &mdash; you can add, edit and delete extensions.</span>
+    <span class="spacer"></span>
+    <button class="ghost" id="pwBtn">Change password</button>
+    <button class="ghost" id="lockBtn">Log out</button>
+  </div>
+
+  <div class="panel">
+    <div class="searchrow">
+      <input id="q" type="search" placeholder="Type a name, extension, designation or department..." autocomplete="off" autofocus>
+      <select id="dept"><option value="">All departments</option></select>
+      <button class="primary" id="addBtn">+ Add</button>
+      <button class="ghost" id="clearBtn">Clear</button>
+    </div>
+    <div class="count" id="count"></div>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:90px">Ext.</th>
+          <th>Name</th>
+          <th class="hide-sm">Designation</th>
+          <th class="hide-sm">Department</th>
+          <th class="acts" style="width:130px"></th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" style="display:none">No matching extension found.</div>
+  </div>
+
+</div>
+
+
+<!-- ============ LOG IN ============ -->
+<div class="overlay" id="loginOverlay">
+  <div class="modal narrow">
+    <h2>Admin log in</h2>
+    <p class="hint">Only the person who manages this list needs this.</p>
+    <form id="loginForm">
+      <label for="l_pw">Password</label>
+      <input id="l_pw" type="password" autocomplete="current-password" maxlength="72">
+      <div class="err" id="loginErr"></div>
+      <div class="modalacts">
+        <button type="button" class="linkbtn" id="forgotLink" style="margin-right:auto">Forgot password?</button>
+        <button type="button" class="ghost" id="loginCancel">Cancel</button>
+        <button type="submit" class="primary">Log in</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- ============ CHANGE PASSWORD ============ -->
+<div class="overlay" id="pwOverlay">
+  <div class="modal narrow">
+    <h2>Change password</h2>
+    <p class="hint">You will be logged out afterwards and must log in with the new password.</p>
+    <form id="pwForm">
+      <label for="c_old">Current password</label>
+      <input id="c_old" type="password" autocomplete="current-password" maxlength="72">
+      <label for="c_new">New password</label>
+      <input id="c_new" type="password" autocomplete="new-password" maxlength="72">
+      <label for="c_new2">Repeat new password</label>
+      <input id="c_new2" type="password" autocomplete="new-password" maxlength="72">
+      <div class="err" id="pwErr"></div>
+      <div class="modalacts">
+        <button type="button" class="ghost" id="pwCancel">Cancel</button>
+        <button type="submit" class="primary" id="pwSave">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- ============ FORGOT PASSWORD (2 steps) ============ -->
+<div class="overlay" id="resetOverlay">
+  <div class="modal narrow">
+
+    <!-- step 1: send the code -->
+    <div class="step on" id="step1">
+      <h2>Forgot password</h2>
+      <p class="hint">A one-time code will be sent to the recovery address set in config.json.</p>
+      <div class="err" id="sendErr"></div>
+      <div class="modalacts">
+        <button type="button" class="ghost" id="resetCancel1">Cancel</button>
+        <button type="button" class="primary" id="sendOtpBtn">Send code</button>
+      </div>
+    </div>
+
+    <!-- step 2: enter the code + a new password -->
+    <div class="step" id="step2">
+      <h2>Enter the code</h2>
+      <p class="hint" id="sentTo"></p>
+      <form id="resetForm">
+        <label for="r_otp">6-digit code</label>
+        <input id="r_otp" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000">
+        <label for="r_new">New password</label>
+        <input id="r_new" type="password" autocomplete="new-password" maxlength="72">
+        <label for="r_new2">Repeat new password</label>
+        <input id="r_new2" type="password" autocomplete="new-password" maxlength="72">
+        <div class="note" id="consoleNote"></div>
+        <div class="err" id="resetErr"></div>
+        <div class="modalacts">
+          <button type="button" class="linkbtn" id="resendBtn" style="margin-right:auto">Send a new code</button>
+          <button type="button" class="ghost" id="resetCancel2">Cancel</button>
+          <button type="submit" class="primary" id="resetSave">Set password</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ============ ADD / EDIT EXTENSION ============ -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2 id="modalTitle">Add extension</h2>
+    <form id="form">
+      <input type="hidden" id="f_id">
+      <label for="f_name">Name *</label>
+      <input id="f_name" required maxlength="80">
+      <label for="f_ext">Extension number *</label>
+      <input id="f_ext" required maxlength="20" placeholder="e.g. 2014">
+      <label for="f_desig">Designation</label>
+      <input id="f_desig" maxlength="80" list="desigList">
+      <datalist id="desigList"></datalist>
+      <label for="f_dept">Department</label>
+      <input id="f_dept" maxlength="80" list="deptList">
+      <datalist id="deptList"></datalist>
+      <div class="err" id="err"></div>
+      <div class="modalacts">
+        <button type="button" class="ghost" id="cancelBtn">Cancel</button>
+        <button type="submit" class="primary" id="saveBtn">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* =======================================================
+   state
+   ======================================================= */
+var all = [];
+var API = '/api/contacts';
+var TOKEN = null;          // login token, kept in memory only - never saved in the browser
+
+var $ = function(id){ return document.getElementById(id); };
+var q = $('q'), deptSel = $('dept'), rows = $('rows'), empty = $('empty'), count = $('count');
+var overlay = $('overlay'), loginOverlay = $('loginOverlay'),
+    pwOverlay = $('pwOverlay'), resetOverlay = $('resetOverlay');
+
+/* =======================================================
+   helpers
+   ======================================================= */
+function esc(s){
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function hl(text, term){
+  var safe = esc(text);
+  if (!term) return safe;
+  var t = term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return safe.replace(new RegExp('('+t+')','ig'), '<mark>$1</mark>');
+}
+function toast(msg){
+  var t = $('toast');
+  t.textContent = msg; t.className = 'on';
+  clearTimeout(t._h); t._h = setTimeout(function(){ t.className=''; }, 2600);
+}
+function isAdmin(){ return TOKEN !== null; }
+function show(el){ el.className = 'overlay on'; }
+function hide(el){ el.className = 'overlay'; }
+
+/* every request that changes something carries the login token */
+function api(url, method, body){
+  var opts = { method: method, headers: { 'Content-Type':'application/json' } };
+  if (TOKEN) opts.headers['X-Admin-Token'] = TOKEN;
+  if (body) opts.body = JSON.stringify(body);
+  return fetch(url, opts).then(function(r){
+    return r.json().then(function(j){ return { ok: r.ok, status: r.status, j: j }; },
+                         function(){ return { ok: r.ok, status: r.status, j: {} }; });
+  });
+}
+
+/* =======================================================
+   load + render  (open to everyone)
+   ======================================================= */
+function load(){
+  fetch(API).then(function(r){ return r.json(); }).then(function(data){
+    all = data;
+    fillDepartments();
+    render();
+  }).catch(function(){
+    rows.innerHTML = '';
+    empty.style.display = 'block';
+    empty.textContent = 'Could not reach the server. Is "node server.js" running?';
+  });
+}
+
+function fillDepartments(){
+  var depts = [], desigs = [];
+  all.forEach(function(r){
+    if (r.department && depts.indexOf(r.department) === -1) depts.push(r.department);
+    if (r.designation && desigs.indexOf(r.designation) === -1) desigs.push(r.designation);
+  });
+  depts.sort(); desigs.sort();
+  var cur = deptSel.value;
+  deptSel.innerHTML = '<option value="">All departments</option>';
+  depts.forEach(function(d){
+    var o = document.createElement('option'); o.value = d; o.textContent = d;
+    deptSel.appendChild(o);
+  });
+  deptSel.value = cur;
+  $('deptList').innerHTML = depts.map(function(d){ return '<option value="'+esc(d)+'">'; }).join('');
+  $('desigList').innerHTML = desigs.map(function(d){ return '<option value="'+esc(d)+'">'; }).join('');
+}
+
+function filtered(){
+  var term = q.value.trim().toLowerCase();
+  var dep = deptSel.value;
+  return all.filter(function(r){
+    if (dep && r.department !== dep) return false;
+    if (!term) return true;
+    return (r.name + ' ' + r.ext + ' ' + r.designation + ' ' + r.department)
+             .toLowerCase().indexOf(term) !== -1;
+  }).sort(function(a,b){
+    if (!term) return String(a.ext).localeCompare(String(b.ext));
+    var ax = String(a.ext).toLowerCase(), bx = String(b.ext).toLowerCase();
+    var s = function(x, r){
+      if (x === term) return 0;
+      if (x.indexOf(term) === 0) return 1;
+      if (r.name.toLowerCase().indexOf(term) === 0) return 2;
+      return 3;
+    };
+    return s(ax,a) - s(bx,b) || ax.localeCompare(bx);
+  });
+}
+
+function render(){
+  var term = q.value.trim();
+  var list = filtered();
+  rows.innerHTML = list.map(function(r){
+    return '<tr>' +
+      '<td class="ext" title="Click to copy" onclick="copyExt(\'' + esc(r.ext) + '\')">' + hl(r.ext, term) + '</td>' +
+      '<td>' + hl(r.name, term) +
+        '<div class="sm-only" style="font-size:12px;color:#6b7a89">' +
+          hl(r.designation, term) + (r.department ? ' &middot; ' + hl(r.department, term) : '') +
+        '</div>' +
+      '</td>' +
+      '<td class="hide-sm">' + hl(r.designation, term) + '</td>' +
+      '<td class="hide-sm">' + (r.department ? '<span class="dept">' + hl(r.department, term) + '</span>' : '') + '</td>' +
+      '<td class="acts">' +
+        '<button class="ghost" onclick="openEdit(' + r.id + ')">Edit</button> ' +
+        '<button class="del" onclick="remove(' + r.id + ')">Delete</button>' +
+      '</td>' +
+    '</tr>';
+  }).join('');
+  empty.style.display = list.length ? 'none' : 'block';
+  empty.textContent = 'No matching extension found.';
+  count.textContent = list.length + ' of ' + all.length + ' extensions';
+}
+
+function copyExt(ext){
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(ext).then(function(){ toast('Copied ' + ext); },
+                                            function(){ toast('Ext ' + ext); });
+  } else { toast('Ext ' + ext); }
+}
+
+/* =======================================================
+   log in / log out
+   ======================================================= */
+$('adminLink').onclick = function(){
+  if (isAdmin()) { logout(); return; }
+  $('l_pw').value = ''; $('loginErr').textContent = '';
+  show(loginOverlay); $('l_pw').focus();
+};
+
+$('loginForm').onsubmit = function(e){
+  e.preventDefault();
+  api('/api/login', 'POST', { password: $('l_pw').value }).then(function(res){
+    if (!res.ok) { $('loginErr').textContent = res.j.error || 'Wrong password.'; return; }
+    TOKEN = res.j.token;
+    document.body.className = 'admin';
+    $('adminLink').textContent = 'Log out';
+    hide(loginOverlay);
+    $('l_pw').value = '';
+    toast('Admin mode on.');
+  }).catch(function(){ $('loginErr').textContent = 'Could not reach the server.'; });
+};
+
+function logout(quiet){
+  if (TOKEN) api('/api/logout', 'POST', null).catch(function(){});
+  TOKEN = null;
+  document.body.className = '';
+  $('adminLink').textContent = 'Admin';
+  hide(overlay); hide(pwOverlay);
+  if (!quiet) toast('Logged out.');
+}
+$('lockBtn').onclick = function(){ logout(); };
+$('loginCancel').onclick = function(){ hide(loginOverlay); };
+
+/* =======================================================
+   change password
+   ======================================================= */
+$('pwBtn').onclick = function(){
+  $('c_old').value = ''; $('c_new').value = ''; $('c_new2').value = '';
+  $('pwErr').textContent = '';
+  show(pwOverlay); $('c_old').focus();
+};
+$('pwCancel').onclick = function(){ hide(pwOverlay); };
+
+$('pwForm').onsubmit = function(e){
+  e.preventDefault();
+  var a = $('c_new').value, b = $('c_new2').value;
+  if (a !== b) { $('pwErr').textContent = 'The two new passwords are not the same.'; return; }
+  if (a.length < 4) { $('pwErr').textContent = 'Password must be at least 4 characters.'; return; }
+  $('pwSave').disabled = true;
+  api('/api/change-password', 'POST', { currentPassword: $('c_old').value, newPassword: a })
+    .then(function(res){
+      $('pwSave').disabled = false;
+      if (!res.ok) { $('pwErr').textContent = res.j.error || 'Could not change the password.'; return; }
+      hide(pwOverlay);
+      logout(true);
+      toast('Password changed. Please log in again with the new one.');
+    }).catch(function(){
+      $('pwSave').disabled = false;
+      $('pwErr').textContent = 'Could not reach the server.';
+    });
+};
+
+/* =======================================================
+   forgot password (OTP by email)
+   ======================================================= */
+$('forgotLink').onclick = function(){
+  hide(loginOverlay);
+  $('step1').className = 'step on';
+  $('step2').className = 'step';
+  $('sendErr').textContent = '';
+  show(resetOverlay);
+};
+$('resetCancel1').onclick = function(){ hide(resetOverlay); };
+$('resetCancel2').onclick = function(){ hide(resetOverlay); };
+
+function sendOtp(btn, errBox){
+  btn.disabled = true;
+  var old = btn.textContent;
+  btn.textContent = 'Sending...';
+  return api('/api/forgot', 'POST', {}).then(function(res){
+    btn.disabled = false; btn.textContent = old;
+    if (!res.ok) { errBox.textContent = res.j.error || 'Could not send the code.'; return false; }
+    $('step1').className = 'step';
+    $('step2').className = 'step on';
+    $('resetErr').textContent = '';
+    $('r_otp').value = ''; $('r_new').value = ''; $('r_new2').value = '';
+    if (res.j.note) {
+      $('sentTo').textContent = 'The code is valid for ' + res.j.minutes + ' minutes.';
+      $('consoleNote').textContent = res.j.note;
+      $('consoleNote').className = 'note on';
+    } else {
+      $('sentTo').textContent = 'Sent to ' + res.j.sentTo + '. Valid for ' + res.j.minutes + ' minutes.';
+      $('consoleNote').className = 'note';
+    }
+    $('r_otp').focus();
+    return true;
+  }).catch(function(){
+    btn.disabled = false; btn.textContent = old;
+    errBox.textContent = 'Could not reach the server.';
+    return false;
+  });
+}
+
+$('sendOtpBtn').onclick = function(){ sendOtp($('sendOtpBtn'), $('sendErr')); };
+$('resendBtn').onclick = function(){
+  sendOtp($('resendBtn'), $('resetErr')).then(function(ok){ if (ok) toast('A new code was sent.'); });
+};
+
+$('resetForm').onsubmit = function(e){
+  e.preventDefault();
+  var a = $('r_new').value, b = $('r_new2').value;
+  if (a !== b) { $('resetErr').textContent = 'The two passwords are not the same.'; return; }
+  if (a.length < 4) { $('resetErr').textContent = 'Password must be at least 4 characters.'; return; }
+  $('resetSave').disabled = true;
+  api('/api/reset', 'POST', { otp: $('r_otp').value, newPassword: a }).then(function(res){
+    $('resetSave').disabled = false;
+    if (!res.ok) { $('resetErr').textContent = res.j.error || 'Could not set the password.'; return; }
+    hide(resetOverlay);
+    logout(true);
+    toast('Password reset. You can log in with the new password now.');
+  }).catch(function(){
+    $('resetSave').disabled = false;
+    $('resetErr').textContent = 'Could not reach the server.';
+  });
+};
+
+/* =======================================================
+   add / edit / delete extensions
+   ======================================================= */
+function openAdd(){
+  if (!isAdmin()) return;
+  $('modalTitle').textContent = 'Add extension';
+  $('f_id').value = ''; $('f_name').value = ''; $('f_ext').value = '';
+  $('f_desig').value = ''; $('f_dept').value = deptSel.value || '';
+  $('err').textContent = '';
+  show(overlay); $('f_name').focus();
+}
+
+function openEdit(id){
+  if (!isAdmin()) return;
+  var r = all.filter(function(x){ return x.id === id; })[0];
+  if (!r) return;
+  $('modalTitle').textContent = 'Edit extension';
+  $('f_id').value = r.id; $('f_name').value = r.name; $('f_ext').value = r.ext;
+  $('f_desig').value = r.designation || ''; $('f_dept').value = r.department || '';
+  $('err').textContent = '';
+  show(overlay); $('f_name').focus();
+}
+
+function closeModal(){ hide(overlay); }
+
+$('form').onsubmit = function(e){
+  e.preventDefault();
+  var id = $('f_id').value;
+  var body = {
+    name: $('f_name').value, ext: $('f_ext').value,
+    designation: $('f_desig').value, department: $('f_dept').value
+  };
+  $('saveBtn').disabled = true;
+  api(id ? API + '/' + id : API, id ? 'PUT' : 'POST', body).then(function(res){
+    $('saveBtn').disabled = false;
+    if (res.status === 401) {
+      $('err').textContent = 'Your session ended. Please log in again.';
+      logout(true); return;
+    }
+    if (!res.ok) { $('err').textContent = res.j.error || 'Save failed.'; return; }
+    closeModal();
+    toast(res.j.warn ? res.j.warn : (id ? 'Updated.' : 'Added.'));
+    load();
+  }).catch(function(){
+    $('saveBtn').disabled = false;
+    $('err').textContent = 'Could not reach the server.';
+  });
+};
+
+function remove(id){
+  if (!isAdmin()) return;
+  var r = all.filter(function(x){ return x.id === id; })[0];
+  if (!r) return;
+  if (!confirm('Delete ' + r.name + ' (ext ' + r.ext + ')?')) return;
+  api(API + '/' + id, 'DELETE', null).then(function(res){
+    if (res.status === 401) { toast('Your session ended. Please log in again.'); logout(true); return; }
+    if (!res.ok) { toast(res.j.error || 'Delete failed.'); return; }
+    toast('Deleted.'); load();
+  }).catch(function(){ toast('Could not reach the server.'); });
+}
+
+/* =======================================================
+   wiring
+   ======================================================= */
+q.addEventListener('input', render);
+deptSel.addEventListener('change', render);
+$('addBtn').onclick = openAdd;
+$('clearBtn').onclick = function(){ q.value = ''; deptSel.value = ''; render(); q.focus(); };
+$('cancelBtn').onclick = closeModal;
+
+[overlay, loginOverlay, pwOverlay, resetOverlay].forEach(function(el){
+  el.onclick = function(e){ if (e.target === el) hide(el); };
+});
+
+function anyModalOpen(){
+  return [overlay, loginOverlay, pwOverlay, resetOverlay]
+    .some(function(el){ return el.className.indexOf('on') !== -1; });
+}
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') { [overlay, loginOverlay, pwOverlay, resetOverlay].forEach(hide); }
+  if (e.key === '/' && document.activeElement !== q && !anyModalOpen()) {
+    e.preventDefault(); q.focus(); q.select();
+  }
+});
+
+load();
+</script>
+</body>
+</html>

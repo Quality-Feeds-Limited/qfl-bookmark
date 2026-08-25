@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QFL Bookmarks</title>
+        <link rel="icon" href="https://qfl.com.bd/wp-content/uploads/2023/03/Q-Logo-Quality-Feed-Limited-favicon.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@600&display=swap"
+            rel="stylesheet">
+        <style>
+            :root {
+                --qfl-green: #00843F;
+                --qfl-green-dark: #006732;
+                --qfl-accent: #4EB02A;
+                --qfl-secondary: #54595F;
+                --qfl-text: #7A7A7A;
+                --bg: #f4f6f4;
+                --surface: #ffffff;
+                --surface-hover: #f1f7f1;
+                --border: #e1e6e1;
+                --ink: #1f2a23;
+                --ink-dim: #6b736c;
+                --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+                --shadow-hover: 0 6px 18px rgba(0, 132, 63, 0.14);
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                background: var(--bg);
+                color: var(--ink);
+                line-height: 1.5;
+                min-height: 100vh;
+                padding: 0 24px 80px;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            header {
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                background: rgba(255, 255, 255, 0.92);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+                margin: 0 -24px 36px;
+                padding: 18px 24px;
+            }
+
+            .header-row {
+                max-width: 1100px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                text-decoration: none;
+                color: var(--ink);
+                flex-shrink: 0;
+            }
+
+            .brand img {
+                height: 38px;
+                width: auto;
+                display: block;
+            }
+
+            .brand .name {
+                font-family: "Roboto Slab", serif;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 1.1;
+                color: var(--qfl-green);
+            }
+
+            .brand .sub {
+                font-size: 11px;
+                color: var(--ink-dim);
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+
+            .mainnav {
+                display: flex;
+                gap: 8px;
+                flex-shrink: 0;
+            }
+
+            .mainnav a {
+                display: inline-block;
+                padding: 7px 15px;
+                border-radius: 20px;
+                border: 1px solid var(--border);
+                background: var(--surface);
+                color: var(--qfl-secondary);
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 1.2;
+                white-space: nowrap;
+                transition: background .15s, color .15s, border-color .15s;
+            }
+
+            .mainnav a:hover {
+                background: var(--surface-hover);
+                color: var(--qfl-green);
+                border-color: var(--qfl-accent);
+            }
+
+            .mainnav a.active {
+                background: var(--qfl-green);
+                border-color: var(--qfl-green);
+                color: #fff;
+            }
+
+            .search-wrap {
+                flex: 1;
+                max-width: 480px;
+                margin-left: auto;
+                position: relative;
+            }
+
+            .search {
+                width: 100%;
+                padding: 11px 14px 11px 38px;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                color: var(--ink);
+                font-size: 14px;
+                font-family: inherit;
+                outline: none;
+                transition: border-color 0.15s, box-shadow 0.15s;
+            }
+
+            .search:focus {
+                border-color: var(--qfl-green);
+                box-shadow: 0 0 0 3px rgba(0, 132, 63, 0.12);
+            }
+
+            .search::placeholder {
+                color: var(--ink-dim);
+            }
+
+            .search-icon {
+                position: absolute;
+                left: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 16px;
+                color: var(--ink-dim);
+                pointer-events: none;
+            }
+
+            main {
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+
+            section {
+                margin-bottom: 48px;
+            }
+
+            section h2 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-family: "Roboto Slab", serif;
+                font-size: 15px;
+                font-weight: 600;
+                color: var(--qfl-green);
+                margin-bottom: 18px;
+                padding-left: 2px;
+            }
+
+            section h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--qfl-accent);
+                border-radius: 2px;
+            }
+
+            section h2 .count {
+                font-family: "Roboto", sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                color: var(--ink-dim);
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 1px 8px;
+                border-radius: 10px;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 14px;
+            }
+
+            .btn {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                min-height: 72px;
+                padding: 14px 16px;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                color: var(--ink);
+                text-decoration: none;
+                box-shadow: var(--shadow);
+                transition: transform 0.12s ease, box-shadow 0.15s, border-color 0.15s, background 0.15s;
+            }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-hover);
+                border-color: var(--qfl-green);
+                background: var(--surface-hover);
+            }
+
+            .btn:active {
+                transform: translateY(0);
+            }
+
+            .icon {
+                flex-shrink: 0;
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--qfl-green);
+                color: #fff;
+            }
+
+            .icon svg.fallback {
+                width: 20px;
+                height: 20px;
+            }
+
+            .icon img.fav {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 10px;
+                padding: 6px;
+                background: #fff;
+            }
+
+            .icon.accent {
+                background: var(--qfl-accent);
+            }
+
+            .icon.secondary {
+                background: var(--qfl-secondary);
+            }
+
+            .icon.orange {
+                background: #FF7A1A;
+            }
+
+            .icon.blue {
+                background: #1a73e8;
+            }
+
+            .icon.brand {
+                background: #fff;
+            }
+
+            .icon.brand svg.fallback {
+                width: 22px;
+                height: 22px;
+            }
+
+            .meta {
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+            }
+
+            .meta .title {
+                font-size: 14.5px;
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .meta .url {
+                font-size: 12px;
+                color: var(--ink-dim);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .empty {
+                text-align: center;
+                color: var(--ink-dim);
+                padding: 60px 0;
+                display: none;
+                font-size: 14px;
+            }
+
+            .empty.show {
+                display: block;
+            }
+
+            footer {
+                text-align: center;
+                color: var(--ink-dim);
+                font-size: 12px;
+                margin-top: 40px;
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            footer a {
+                color: var(--qfl-green);
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            kbd {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-bottom-width: 2px;
+                border-radius: 4px;
+                padding: 1px 6px;
+                font-size: 11px;
+                font-family: inherit;
+                color: var(--ink);
+            }
+
+            @media (max-width: 640px) {
+                body {
+                    padding: 0 16px 60px;
+                }
+
+                header {
+                    margin: 0 -16px 28px;
+                    padding: 14px 16px;
+                }
+
+                .header-row {
+                    flex-wrap: wrap;
+                    gap: 14px;
+                }
+
+                .brand .name {
+                    font-size: 14px;
+                }
+
+                .mainnav {
+                    order: 3;
+                    width: 100%;
+                }
+
+                .mainnav a {
+                    flex: 1;
+                    text-align: center;
+                }
+
+                .search-wrap {
+                    margin-left: 0;
+                    width: 100%;
+                    max-width: none;
+                }
+
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-row">
+                <a class="brand" href="https://qfl.com.bd" target="_blank" rel="noopener">
+                    <img src="data:image/png;base64,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"
+                        alt="Quality Feeds Limited">
+                    <span>
+                        <span class="name">Quality Feeds Limited</span><br>
+                        <span class="sub">Bookmarks</span>
+                    </span>
+                </a>
+                <nav class="mainnav">
+                    <a href="/phonebook">PhoneBook</a>
+                    <a href="/" class="active">Bookmark</a>
+                </nav>
+                <div class="search-wrap">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input class="search" type="text" placeholder="Search bookmarks..." autocomplete="off" id="search">
+                </div>
+            </div>
+        </header>
+
+        <main id="main"></main>
+
+        <div class="empty" id="empty">No matches found.</div>
+
+        <footer>
+            Quality Feeds Limited &middot; <a href="https://qfl.com.bd" target="_blank" rel="noopener">qfl.com.bd</a>
+            &middot; Press <kbd>/</kbd> to search
+        </footer>
+
+        <!-- Icons (inline SVG, reusable) -->
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+            <defs>
+                <symbol id="i-dashboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="9" />
+                    <rect x="14" y="3" width="7" height="5" />
+                    <rect x="14" y="12" width="7" height="9" />
+                    <rect x="3" y="16" width="7" height="5" />
+                </symbol>
+                <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                </symbol>
+                <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </symbol>
+                <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                </symbol>
+                <symbol id="i-gmaps" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#EA4335" />
+                    <circle cx="12" cy="9" r="2.6" fill="#fff" />
+                </symbol>
+                <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" />
+                    <circle cx="12" cy="10" r="2.5" />
+                </symbol>
+                <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21V10l6 4V10l6 4V7l6 3v11z" />
+                    <line x1="3" y1="21" x2="21" y2="21" />
+                </symbol>
+                <symbol id="i-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="3" width="16" height="18" rx="1" />
+                    <line x1="9" y1="7" x2="9" y2="7" />
+                    <line x1="15" y1="7" x2="15" y2="7" />
+                    <line x1="9" y1="11" x2="9" y2="11" />
+                    <line x1="15" y1="11" x2="15" y2="11" />
+                    <line x1="9" y1="15" x2="9" y2="15" />
+                    <line x1="15" y1="15" x2="15" y2="15" />
+                </symbol>
+                <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4l-2.3 2.3-2-2 2.3-2.3z" />
+                </symbol>
+                <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                </symbol>
+                <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <polyline points="22,6 12,13 2,6" />
+                </symbol>
+                <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </symbol>
+                <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </symbol>
+                <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </symbol>
+                <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                    <line x1="7" y1="7" x2="7.01" y2="7" />
+                </symbol>
+                <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </symbol>
+            </defs>
+        </svg>
+
+        <script>
+            const links = [
+                {
+                    section: "Quality Dashboards", icon: { type: "img", src: "data:image/png;base64,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" }, items: [
+                        { title: "QFL TRPO", url: "https://trpo.qfl.com.bd", icon: "i-globe", tint: "default" },
+                        { title: "QPL ERP", url: "https://erp.qppl.com.bd", icon: "i-tag", tint: "default" },
+                        { title: "QBL ERP", url: "https://erp.qbl.com.bd", icon: "i-tag", tint: "default" },
+                        { title: "QAL ERP", url: "https://erp.qal.com.bd", icon: "i-dashboard", tint: "accent" },
+                        { title: "QIL ERP", url: "https://erp.qil.com.bd", icon: "i-dashboard", tint: "default" },
+                        { title: "QLL ERP", url: "https://erp.qll.com.bd", icon: "i-chart", tint: "accent" },
+                        { title: "QHL ERP", url: "https://erp.qhl.com.bd", icon: "i-tag", tint: "default" },
+                    ]
+                },
+                {
+                    section: "Web Sites", icon: { type: "img", src: "data:image/png;base64,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" }, items: [
+                        { title: "Quality Feeds Limited", url: "https://qfl.com.bd", icon: "i-globe", tint: "default" },
+                        { title: "Quality Foods", url: "https://qualityfoods.com.bd", icon: "i-tag", tint: "default" },
+                        { title: "Qurbani Ecommerce Website", url: "https://qurbanihaat.qll.com.bd", icon: "i-tag", tint: "default" },
+                        // { title: "The Big Q", url: "https://thebigq.com.bd", icon: "i-tag", tint: "default" },
+                    ]
+                },
+                {
+                    section: "Map Locations", icon: { type: "svg", id: "i-gmaps" }, items: [
+                        { title: "QFL Shahjahanpur Factory", url: "https://www.google.com/maps/place/QFL+Shahjahanpur+Factory/@24.7002141,89.3856078,348m/data=!3m1!1e3!4m6!3m5!1s0x39fc4d44dc985c85:0xef23e5fd3a75aa8f!8m2!3d24.7000207!4d89.3861875!16s%2Fg%2F11c1_w6b7t?hl=en&entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-factory", tint: "default" },
+                        { title: "QFL Nandigram Factory", url: "https://www.google.com/maps/place/Quality+Feeds+Limited,+Kathom,+Nandigram/@24.6653308,89.271829,716m/data=!3m1!1e3!4m6!3m5!1s0x39fc4fa7859f8331:0x800a35e338ba7eb2!8m2!3d24.6656237!4d89.2734269!16s%2Fg%2F11c562xppx?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-doc", tint: "secondary" },
+                        { title: "QFL Gazipur Plant", url: "https://www.google.com/maps/place/Quality+Feeds+limited+Gazipur+Plant/@24.1706711,90.428668,401m/data=!3m1!1e3!4m6!3m5!1s0x375677bfcb889301:0x932a0a1ebb160db0!8m2!3d24.1707853!4d90.4300536!16s%2Fg%2F11f_0wcbq0?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-doc", tint: "secondary" },
+                        { title: "Quality Printing Packaging Limited", url: "https://www.google.com/maps/place/Quality+Printing+Packaging+Limited/@24.1455917,90.41077,661a,35y,297.37h,4.77t/data=!3m1!1e3!4m14!1m7!3m6!1s0x375677d357a26381:0x12cff050bb75d927!2sQuality+Printing+Packaging+Limited!8m2!3d24.1465976!4d90.4100893!16s%2Fg%2F11vhhlm2bp!3m5!1s0x375677d357a26381:0x12cff050bb75d927!8m2!3d24.1465976!4d90.4100893!16s%2Fg%2F11vhhlm2bp?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-map", tint: "default" },
+                        { title: "QBL (Farm)", url: "https://www.google.com/maps/place/QBL/@24.7020921,89.351421,505m/data=!3m1!1e3!4m6!3m5!1s0x39fc4d85e8f568d9:0x1b18008ce0430c3b!8m2!3d24.7029964!4d89.3524735!16s%2Fg%2F11mxv8rzz7?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-doc", tint: "secondary" },
+                        { title: "QBL (Hatchery)", url: "https://www.google.com/maps/place/Quality+Breeders+Limited+(Hatchery)/@24.7017284,89.3828188,252m/data=!3m1!1e3!4m6!3m5!1s0x39fc4d8d6f53996b:0xc5a7951dcfbdbb7a!8m2!3d24.7018124!4d89.3825907!16s%2Fg%2F11qyfp8smb?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-map", tint: "default" },
+                        { title: "QAL Unit-1", url: "https://www.google.com/maps/place/Quality+Aquabreeds+Limited/@24.7917281,89.2418993,1008m/data=!3m1!1e3!4m6!3m5!1s0x39fc5a0f17b5ad3d:0x33a41546c1883b8!8m2!3d24.7925839!4d89.2404039!16s%2Fg%2F11c562xpld?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-factory", tint: "default" },
+                        { title: "QAL Unit-2", url: "https://www.google.com/maps/place/Quality+Aquabreeds+Limited/@24.74668,89.2596025,1194m/data=!3m1!1e3!4m6!3m5!1s0x39fc51bf766a440b:0xb5368e53f1f14c39!8m2!3d24.748386!4d89.2588255!16s%2Fg%2F11h6m7xd_9?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-factory", tint: "default" },
+                        { title: "Quality Integrated Agro Ltd. Mantala, Hobigonj", url: "https://www.google.com/maps/place/Quality+Integrated+Agro+Ltd.+Mantala,+Hobigonj/@24.0492336,91.3576215,616m/data=!3m1!1e3!4m6!3m5!1s0x3753fd5d3f68883d:0xaa620bfa679b7546!8m2!3d24.0491566!4d91.359645!16s%2Fg%2F11h118vw58?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-map", tint: "default" },
+                        { title: "Quality Livestock Limited", url: "https://www.google.com/maps/place/Quality+Livestock+Limited/@24.6678663,89.2408718,2019m/data=!3m1!1e3!4m6!3m5!1s0x39fc453705238f0d:0x7ff2e16e38df2e9e!8m2!3d24.667866!4d89.246022!16s%2Fg%2F11kqhz_24d?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-doc", tint: "secondary" },
+                        { title: "Q Hotel Dhaka", url: "https://www.google.com/maps/place/Q+Hotel+Dhaka/@23.8375279,90.4562381,382m/data=!3m1!1e3!4m9!3m8!1s0x3755c9776aa00461:0xd941b05be6503aa8!5m2!4m1!1i2!8m2!3d23.8377208!4d90.4572272!16s%2Fg%2F11yj5_9mkl?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D", icon: "i-doc", tint: "secondary" },
+
+                    ]
+                },
+                //   { section: "Miscellaneous", items: [
+                //     { title: "Quality Breeders Ltd.", url: "https://qfl.com.bd/quality-breeders-limited/", icon: "i-office", tint: "secondary" },
+                //     { title: "Quality Aquabreeds Ltd.", url: "https://qfl.com.bd/quality-aquabreeds-limited/", icon: "i-office", tint: "secondary" },
+                //     { title: "Quality Integrated Agro", url: "https://qfl.com.bd/quality-integrated-agro-limited/", icon: "i-office", tint: "secondary" },
+                //     { title: "Quality Printing & Packaging", url: "https://qfl.com.bd/quality-printing-packaging-limited/", icon: "i-office", tint: "secondary" },
+                //     { title: "Quality Livestock Ltd.", url: "https://qfl.com.bd/quality-livestock-limited/", icon: "i-office", tint: "secondary" },
+                //     { title: "QFL on Facebook", url: "https://www.facebook.com/qualityfeedslimited.bd/", icon: "i-link", tint: "blue" },
+                //     { title: "GitHub", url: "https://github.com", icon: "i-tool", tint: "secondary" },
+                //     { title: "QFL Contact", url: "https://qfl.com.bd/contact/", icon: "i-phone", tint: "default" },
+                //   ]},
+            ];
+
+            function host(u) {
+                try { return new URL(u).hostname.replace(/^www\./, "") + (new URL(u).pathname.length > 1 ? "" : ""); }
+                catch { return u; }
+            }
+            function prettyUrl(u) {
+                try {
+                    const url = new URL(u);
+                    let s = url.hostname.replace(/^www\./, "");
+                    if (url.pathname.length > 1) s += url.pathname.replace(/\/$/, "");
+                    return s;
+                } catch { return u; }
+            }
+            function render(filter) {
+                const main = document.getElementById("main");
+                const empty = document.getElementById("empty");
+                main.innerHTML = "";
+                let total = 0;
+
+                links.forEach(group => {
+                    const items = group.items.filter(it => {
+                        if (!filter) return true;
+                        const q = filter.toLowerCase();
+                        return it.title.toLowerCase().includes(q)
+                            || prettyUrl(it.url).toLowerCase().includes(q)
+                            || group.section.toLowerCase().includes(q);
+                    });
+                    if (!items.length) return;
+                    total += items.length;
+
+                    const sec = document.createElement("section");
+                    const h = document.createElement("h2");
+                    h.innerHTML = `<span>${group.section}</span><span class="count">${items.length}</span>`;
+                    sec.appendChild(h);
+
+                    const grid = document.createElement("div");
+                    grid.className = "grid";
+                    items.forEach(it => {
+                        const a = document.createElement("a");
+                        a.className = "btn";
+                        a.href = it.url;
+                        a.target = "_blank";
+                        a.rel = "noopener";
+                        let iconHtml;
+                        if (group.icon) {
+                            if (group.icon.type === "img") {
+                                iconHtml = `<span class="icon brand"><img class="fav" src="${group.icon.src}" alt=""></span>`;
+                            } else {
+                                iconHtml = `<span class="icon brand"><svg class="fallback"><use href="#${group.icon.id}"/></svg></span>`;
+                            }
+                        } else {
+                            const tint = it.tint === "default" ? "" : it.tint;
+                            iconHtml = `<span class="icon ${tint}"><svg class="fallback"><use href="#${it.icon}"/></svg></span>`;
+                        }
+                        a.innerHTML = iconHtml +
+                            `<span class="meta"><span class="title">${it.title}</span>` +
+                            `<span class="url">${prettyUrl(it.url)}</span></span>`;
+                        grid.appendChild(a);
+                    });
+                    sec.appendChild(grid);
+                    main.appendChild(sec);
+                });
+
+                empty.classList.toggle("show", total === 0);
+            }
+
+            const search = document.getElementById("search");
+            search.addEventListener("input", e => render(e.target.value));
+
+            document.addEventListener("keydown", e => {
+                if (e.key === "/" && document.activeElement !== search) {
+                    e.preventDefault();
+                    search.focus();
+                }
+                if (e.key === "Escape" && document.activeElement === search) {
+                    search.value = "";
+                    render("");
+                    search.blur();
+                }
+            });
+
+            render("");
+        </script>
+    </body>
+
+</html>

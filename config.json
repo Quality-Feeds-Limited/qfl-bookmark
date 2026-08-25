@@ -1,0 +1,35 @@
+{
+  "_1_password": "The admin password is NOT written here. It is encrypted (scrypt) the first time the server starts. Default password is 1234 - change it from the Admin menu on the page.",
+  "_2_recoveryEmail": "Where the forgot-password code (OTP) is sent.",
+  "recoveryEmail": "loton1984@gmail.com",
+  "_3_mail": "mail.mode picks HOW the code is sent. Use one of: console | gmail | smtp",
+  "_4_console": "console = no email at all. The code is printed in the black server window and saved in otp.log. Good for testing.",
+  "_5_gmail": "gmail = Gmail or Google Workspace. Put your address in mail.gmail.user and a 16-character App Password in mail.gmail.appPassword (Google Account > Security > 2-Step Verification > App passwords). Your normal Gmail password will NOT work.",
+  "_6_smtp": "smtp = your own company mail server. Fill in host, port, secure, user, password. Port 587 = secure false (STARTTLS). Port 465 = secure true.",
+  "mail": {
+    "mode": "console",
+    "from": "QFL Extension Finder <no-reply@qualityfeeds.local>",
+    "gmail": {
+      "user": "",
+      "appPassword": ""
+    },
+    "smtp": {
+      "host": "",
+      "port": 587,
+      "secure": false,
+      "user": "",
+      "password": "",
+      "allowSelfSigned": false
+    }
+  },
+  "adminPassword": {
+    "algo": "scrypt",
+    "N": 16384,
+    "r": 8,
+    "p": 1,
+    "keylen": 64,
+    "salt": "79d09a40705b4eb80269e2d146a901cd",
+    "hash": "1d522c1b82f84a8372acb7b865d6e2402f79e16e5c9d309fdfcc645985699040837d01dcdbacd8927f5cfeb88e4273ffea808c0fb41f124d447698869ea6caf4",
+    "changedAt": "2026-08-25T05:34:31.320Z"
+  }
+}

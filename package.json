@@ -1,0 +1,16 @@
+{
+  "name": "qfl-extension-finder",
+  "version": "1.0.0",
+  "description": "Extension-number search for Quality Feeds Limited. Plain Node.js, no frameworks and no dependencies.",
+  "private": true,
+  "license": "UNLICENSED",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

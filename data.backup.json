@@ -1,0 +1,2018 @@
+[
+  {
+    "ext": "1001",
+    "name": "Chairman Sir",
+    "designation": "Head Office",
+    "department": "DIRECTORS",
+    "id": 1
+  },
+  {
+    "ext": "2007",
+    "name": "Sadequr Rahman",
+    "designation": "Sr. GM",
+    "department": "AUDIT",
+    "id": 2
+  },
+  {
+    "ext": "2008",
+    "name": "Omar Faruk",
+    "designation": "Sr.GM- A/C",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 3
+  },
+  {
+    "ext": "2045",
+    "name": "Shahadat Hossain",
+    "designation": "PIC",
+    "department": "GAZIPUR PLANT",
+    "id": 4
+  },
+  {
+    "ext": "1002",
+    "name": "VC Sir",
+    "designation": "Head Office",
+    "department": "DIRECTORS",
+    "id": 5
+  },
+  {
+    "ext": "2032",
+    "name": "Humayun Kobir",
+    "designation": "AGM",
+    "department": "AUDIT",
+    "id": 6
+  },
+  {
+    "ext": "4050",
+    "name": "Golam Kibria Selim",
+    "designation": "Sr.GM (PIC)",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 7
+  },
+  {
+    "ext": "3061",
+    "name": "Babul Hossain",
+    "designation": "DPIC",
+    "department": "GAZIPUR PLANT",
+    "id": 8
+  },
+  {
+    "ext": "1003",
+    "name": "MD Sir",
+    "designation": "Head Office",
+    "department": "DIRECTORS",
+    "id": 9
+  },
+  {
+    "ext": "2021",
+    "name": "Moazzem H. Milon",
+    "designation": "AGM",
+    "department": "AUDIT",
+    "id": 10
+  },
+  {
+    "ext": "3047",
+    "name": "Milton Ghosh",
+    "designation": "Sr.Manager- MKT",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 11
+  },
+  {
+    "ext": "3060",
+    "name": "Mosaddek (A/C)",
+    "designation": "Accounts",
+    "department": "GAZIPUR PLANT",
+    "id": 12
+  },
+  {
+    "ext": "1004",
+    "name": "S.M Feroz Sir",
+    "designation": "Head Office",
+    "department": "DIRECTORS",
+    "id": 13
+  },
+  {
+    "ext": "2033",
+    "name": "Shofiqul Islam",
+    "designation": "Manager",
+    "department": "AUDIT",
+    "id": 14
+  },
+  {
+    "ext": "3049",
+    "name": "Bimol",
+    "designation": "Sr. Manager- A/C",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 15
+  },
+  {
+    "ext": "3062",
+    "name": "Sales",
+    "designation": "Sales",
+    "department": "GAZIPUR PLANT",
+    "id": 16
+  },
+  {
+    "ext": "1005",
+    "name": "M.Safir Rahman Sir",
+    "designation": "Group Director",
+    "department": "DIRECTORS",
+    "id": 17
+  },
+  {
+    "ext": "2037",
+    "name": "Faruk Hossain",
+    "designation": "Manager",
+    "department": "AUDIT",
+    "id": 18
+  },
+  {
+    "ext": "3046",
+    "name": "Alom",
+    "designation": "Ex. Officer- A/C",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 19
+  },
+  {
+    "ext": "3064",
+    "name": "Danish",
+    "designation": "Mechanical",
+    "department": "GAZIPUR PLANT",
+    "id": 20
+  },
+  {
+    "ext": "1007",
+    "name": "Nameesha Hussain",
+    "designation": "Finance Director-QHL",
+    "department": "DIRECTORS",
+    "id": 21
+  },
+  {
+    "ext": "3027",
+    "name": "Pavel",
+    "designation": "Sr. Ex. Officer",
+    "department": "AUDIT",
+    "id": 22
+  },
+  {
+    "ext": "4052",
+    "name": "DPIC",
+    "designation": "Manager",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 23
+  },
+  {
+    "ext": "3065",
+    "name": "Md. Rakeybul Hasan",
+    "designation": "Electrical",
+    "department": "GAZIPUR PLANT",
+    "id": 24
+  },
+  {
+    "ext": "1006",
+    "name": "Uzayr Hafiz Sir",
+    "designation": "Sales & MKT Director",
+    "department": "DIRECTORS",
+    "id": 25
+  },
+  {
+    "ext": "3030",
+    "name": "Aminul",
+    "designation": "Sr. Ex. Officer",
+    "department": "AUDIT",
+    "id": 26
+  },
+  {
+    "ext": "4047",
+    "name": "Nahid",
+    "designation": "Vat-Tax",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 27
+  },
+  {
+    "ext": "3111",
+    "name": "Md. Nazmul (Jewel)",
+    "designation": "Admin",
+    "department": "GAZIPUR PLANT",
+    "id": 28
+  },
+  {
+    "ext": "1012",
+    "name": "M.Basir Rahman Sir",
+    "designation": "Finance Director",
+    "department": "DIRECTORS",
+    "id": 29
+  },
+  {
+    "ext": "3043",
+    "name": "Khasru",
+    "designation": "Ex. Officer",
+    "department": "AUDIT",
+    "id": 30
+  },
+  {
+    "ext": "3048",
+    "name": "Jafor",
+    "designation": "Sr. Officer",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 31
+  },
+  {
+    "ext": "3063",
+    "name": "Store",
+    "designation": "Store",
+    "department": "GAZIPUR PLANT",
+    "id": 32
+  },
+  {
+    "ext": "1008",
+    "name": "MD Sir",
+    "designation": "QHL",
+    "department": "DIRECTORS",
+    "id": 33
+  },
+  {
+    "ext": "3057",
+    "name": "Ashiq",
+    "designation": "Ex. Officer",
+    "department": "AUDIT",
+    "id": 34
+  },
+  {
+    "ext": "4039",
+    "name": "Mizan",
+    "designation": "Jr. Officer",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 35
+  },
+  {
+    "ext": "3066",
+    "name": "QC",
+    "designation": "Lab",
+    "department": "GAZIPUR PLANT",
+    "id": 36
+  },
+  {
+    "ext": "1017",
+    "name": "S.M Feroz Sir",
+    "designation": "DMD Sir Office",
+    "department": "DIRECTORS",
+    "id": 37
+  },
+  {
+    "ext": "3031",
+    "name": "Zakir Hossain",
+    "designation": "Sr. Officer",
+    "department": "AUDIT",
+    "id": 38
+  },
+  {
+    "ext": "4051",
+    "name": "Gopal Kumar-Admin",
+    "designation": "Officer-factory",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 39
+  },
+  {
+    "ext": "3068",
+    "name": "2nd Plant",
+    "designation": "Control Room",
+    "department": "GAZIPUR PLANT",
+    "id": 40
+  },
+  {
+    "ext": "1011",
+    "name": "Board Room",
+    "designation": "Head Office",
+    "department": "DIRECTORS",
+    "id": 41
+  },
+  {
+    "ext": "3028",
+    "name": "Monir",
+    "designation": "Jr.Officer",
+    "department": "AUDIT",
+    "id": 42
+  },
+  {
+    "ext": "3118",
+    "name": "Audit",
+    "designation": "Officer-factory",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 43
+  },
+  {
+    "ext": "3067",
+    "name": "1st, 3rd & 4th Plant",
+    "designation": "Control Room",
+    "department": "GAZIPUR PLANT",
+    "id": 44
+  },
+  {
+    "ext": "1010",
+    "name": "Conference Room",
+    "designation": "Head Office",
+    "department": "DIRECTORS",
+    "id": 45
+  },
+  {
+    "ext": "3029",
+    "name": "Jonayed",
+    "designation": "Sr. Officer",
+    "department": "AUDIT",
+    "id": 46
+  },
+  {
+    "ext": "3117",
+    "name": "Accounts",
+    "designation": "Sr. Ex. Officer- A/C",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 47
+  },
+  {
+    "ext": "3072",
+    "name": "10st Plant",
+    "designation": "Control Room",
+    "department": "GAZIPUR PLANT",
+    "id": 48
+  },
+  {
+    "ext": "1009",
+    "name": "TV Room",
+    "designation": "Head Office",
+    "department": "DIRECTORS",
+    "id": 49
+  },
+  {
+    "ext": "3058",
+    "name": "Manik Miah",
+    "designation": "Sr. Officer",
+    "department": "AUDIT",
+    "id": 50
+  },
+  {
+    "ext": "4053",
+    "name": "Gest House",
+    "designation": "QPL",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 51
+  },
+  {
+    "ext": "3069",
+    "name": "Audit (Gazipur)",
+    "designation": "Officer",
+    "department": "GAZIPUR PLANT",
+    "id": 52
+  },
+  {
+    "ext": "1018",
+    "name": "VC Sir",
+    "designation": "Nandigram Plant",
+    "department": "DIRECTORS",
+    "id": 53
+  },
+  {
+    "ext": "3040",
+    "name": "Tanvir Ahmed",
+    "designation": "Jr.Officer",
+    "department": "AUDIT",
+    "id": 54
+  },
+  {
+    "ext": "4054",
+    "name": "Gate-1",
+    "designation": "Security-Factory",
+    "department": "QPL (Quality Printing & Packaging Ltd.)",
+    "id": 55
+  },
+  {
+    "ext": "3070",
+    "name": "Engineering Store",
+    "designation": "Gazipur Plant",
+    "department": "GAZIPUR PLANT",
+    "id": 56
+  },
+  {
+    "ext": "1019",
+    "name": "VC Sir",
+    "designation": "Shajahanpur Plant",
+    "department": "DIRECTORS",
+    "id": 57
+  },
+  {
+    "ext": "3056",
+    "name": "Shohag",
+    "designation": "Officer",
+    "department": "AUDIT",
+    "id": 58
+  },
+  {
+    "ext": "2043",
+    "name": "Arif Hayder",
+    "designation": "Deputy Director",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 59
+  },
+  {
+    "ext": "2046",
+    "name": "Omar Faruk",
+    "designation": "PIC",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 60
+  },
+  {
+    "ext": "2004",
+    "name": "Romanur Rahman",
+    "designation": "Sr.GM",
+    "department": "ADMIN",
+    "id": 61
+  },
+  {
+    "ext": "2001/2002",
+    "name": "Abdur Rashid",
+    "designation": "Director",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 62
+  },
+  {
+    "ext": "2020",
+    "name": "Md. Musa",
+    "designation": "DGM",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 63
+  },
+  {
+    "ext": "3095",
+    "name": "Anwar Pervez Sikder",
+    "designation": "DPIC",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 64
+  },
+  {
+    "ext": "2014",
+    "name": "Tariqul Islam",
+    "designation": "Sr. AGM",
+    "department": "ADMIN",
+    "id": 65
+  },
+  {
+    "ext": "3112",
+    "name": "Mr. Probal",
+    "designation": "AGM",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 66
+  },
+  {
+    "ext": "2019",
+    "name": "Sajal",
+    "designation": "GM",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 67
+  },
+  {
+    "ext": "3091",
+    "name": "Biplob Kumar Mahanta",
+    "designation": "Admin",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 68
+  },
+  {
+    "ext": "3195",
+    "name": "Hasan",
+    "designation": "EO (Travel desk)",
+    "department": "ADMIN",
+    "id": 69
+  },
+  {
+    "ext": "2023",
+    "name": "Anawar",
+    "designation": "Manager",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 70
+  },
+  {
+    "ext": "2034",
+    "name": "Sakil",
+    "designation": "Manager-Admin",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 71
+  },
+  {
+    "ext": "3090",
+    "name": "Accounts",
+    "designation": "Accounts",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 72
+  },
+  {
+    "ext": "5001",
+    "name": "Front Desk-1",
+    "designation": "Officer",
+    "department": "ADMIN",
+    "id": 73
+  },
+  {
+    "ext": "4066",
+    "name": "Md. Toriqul Islam",
+    "designation": "Manager",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 74
+  },
+  {
+    "ext": "3044",
+    "name": "Rajib Mitro",
+    "designation": "Sr. Officer",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 75
+  },
+  {
+    "ext": "3092",
+    "name": "Sales",
+    "designation": "Sales",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 76
+  },
+  {
+    "ext": "5002",
+    "name": "Ibrahim",
+    "designation": "Officer",
+    "department": "ADMIN",
+    "id": 77
+  },
+  {
+    "ext": "3023",
+    "name": "Jalal",
+    "designation": "Sr. Ex. Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 78
+  },
+  {
+    "ext": "3045",
+    "name": "Khokhon",
+    "designation": "Ex. Officer",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 79
+  },
+  {
+    "ext": "3094",
+    "name": "Shajahan",
+    "designation": "Mechanical",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 80
+  },
+  {
+    "ext": "5003",
+    "name": "Maruf",
+    "designation": "Ass. Manager",
+    "department": "ADMIN",
+    "id": 81
+  },
+  {
+    "ext": "2022",
+    "name": "Khurshid Alam",
+    "designation": "Ex. Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 82
+  },
+  {
+    "ext": "3042",
+    "name": "Khairul - Sales QBL",
+    "designation": "Sr. Ex. Officer",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 83
+  },
+  {
+    "ext": "4067",
+    "name": "Electrical",
+    "designation": "Electrical",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 84
+  },
+  {
+    "ext": "5004",
+    "name": "Monir",
+    "designation": "Ex. Officer",
+    "department": "ADMIN",
+    "id": 85
+  },
+  {
+    "ext": "3020",
+    "name": "Mozibur",
+    "designation": "Sr. Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 86
+  },
+  {
+    "ext": "4045",
+    "name": "Jafrul Amin",
+    "designation": "Jr. Officer",
+    "department": "QBL (Quality Breeders Ltd.)",
+    "id": 87
+  },
+  {
+    "ext": "3093",
+    "name": "Store",
+    "designation": "Store",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 88
+  },
+  {
+    "ext": "3024",
+    "name": "Nur Alom",
+    "designation": "Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 89
+  },
+  {
+    "ext": "3096",
+    "name": "Lab",
+    "designation": "Lab",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 90
+  },
+  {
+    "ext": "2003",
+    "name": "Aminul Islam",
+    "designation": "Ast. Director",
+    "department": "ACCOUNTS",
+    "id": 91
+  },
+  {
+    "ext": "3021",
+    "name": "Bashar",
+    "designation": "Sr. Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 92
+  },
+  {
+    "ext": "3150",
+    "name": "K.M Shariful",
+    "designation": "PIC",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 93
+  },
+  {
+    "ext": "3097",
+    "name": "5th Plant",
+    "designation": "Control Room",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 94
+  },
+  {
+    "ext": "2005",
+    "name": "Bayazid Hossain",
+    "designation": "Sr. GM",
+    "department": "ACCOUNTS",
+    "id": 95
+  },
+  {
+    "ext": "3190",
+    "name": "Shah Alom",
+    "designation": "Offcer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 96
+  },
+  {
+    "ext": "2057",
+    "name": "Rasel",
+    "designation": "Manager",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 97
+  },
+  {
+    "ext": "3098",
+    "name": "6th Plant",
+    "designation": "Control Room",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 98
+  },
+  {
+    "ext": "2018",
+    "name": "Mohammad Ataur",
+    "designation": "DGM",
+    "department": "ACCOUNTS",
+    "id": 99
+  },
+  {
+    "ext": "3193",
+    "name": "Shohidul",
+    "designation": "Offcer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 100
+  },
+  {
+    "ext": "2036",
+    "name": "Arif (A/C)",
+    "designation": "Sr. Manager",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 101
+  },
+  {
+    "ext": "3099",
+    "name": "7th Plant",
+    "designation": "Control Room",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 102
+  },
+  {
+    "ext": "2016",
+    "name": "Abdullah-Al-Mamun",
+    "designation": "DGM",
+    "department": "ACCOUNTS",
+    "id": 103
+  },
+  {
+    "ext": "3019",
+    "name": "Tomal",
+    "designation": "Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 104
+  },
+  {
+    "ext": "3155",
+    "name": "Alim",
+    "designation": "Officer",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 105
+  },
+  {
+    "ext": "3100",
+    "name": "9th Plant",
+    "designation": "Control Room",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 106
+  },
+  {
+    "ext": "2017",
+    "name": "Amzad Hossain",
+    "designation": "Sr. AGM",
+    "department": "ACCOUNTS",
+    "id": 107
+  },
+  {
+    "ext": "3022",
+    "name": "Musa",
+    "designation": "Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 108
+  },
+  {
+    "ext": "3198",
+    "name": "Jakaria (Vat & Tax)",
+    "designation": "Sr. Officer",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 109
+  },
+  {
+    "ext": "3101",
+    "name": "11th Plant",
+    "designation": "Control Room",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 110
+  },
+  {
+    "ext": "2027",
+    "name": "Kazol",
+    "designation": "Sr. Manager",
+    "department": "ACCOUNTS",
+    "id": 111
+  },
+  {
+    "ext": "3037",
+    "name": "Anwar",
+    "designation": "Offcer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 112
+  },
+  {
+    "ext": "3073",
+    "name": "Torik",
+    "designation": "Officer-Admin",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 113
+  },
+  {
+    "ext": "4060",
+    "name": "20th Plant",
+    "designation": "Control Room",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 114
+  },
+  {
+    "ext": "2028",
+    "name": "Imran",
+    "designation": "Sr. Manager",
+    "department": "ACCOUNTS",
+    "id": 115
+  },
+  {
+    "ext": "3192",
+    "name": "Zubair",
+    "designation": "Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 116
+  },
+  {
+    "ext": "3034",
+    "name": "Admin",
+    "designation": "Admin-HO",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 117
+  },
+  {
+    "ext": "3102",
+    "name": "Audit (Sherpur)",
+    "designation": "Audit",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 118
+  },
+  {
+    "ext": "2029",
+    "name": "Faruk",
+    "designation": "Sr. Manager",
+    "department": "ACCOUNTS",
+    "id": 119
+  },
+  {
+    "ext": "3191",
+    "name": "Sabbir",
+    "designation": "Offcer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 120
+  },
+  {
+    "ext": "2039",
+    "name": "Sales & Marketing",
+    "designation": "Head Office",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 121
+  },
+  {
+    "ext": "3152",
+    "name": "Hafiz",
+    "designation": "Mechanical",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 122
+  },
+  {
+    "ext": "2061",
+    "name": "Samim Acc",
+    "designation": "Sr. Manager",
+    "department": "ACCOUNTS",
+    "id": 123
+  },
+  {
+    "ext": "4043",
+    "name": "Emdad",
+    "designation": "Jr. Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 124
+  },
+  {
+    "ext": "2038",
+    "name": "Confarance Room",
+    "designation": "Conference Room",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 125
+  },
+  {
+    "ext": "3139",
+    "name": "Nur Mohammad",
+    "designation": "IT",
+    "department": "SHAHJAHANPUR PLANT",
+    "id": 126
+  },
+  {
+    "ext": "3114",
+    "name": "Nazir",
+    "designation": "VAT-Tax",
+    "department": "ACCOUNTS",
+    "id": 127
+  },
+  {
+    "ext": "4044",
+    "name": "Kakon",
+    "designation": "Jr. Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 128
+  },
+  {
+    "ext": "3035",
+    "name": "Fuad Hasan",
+    "designation": "Cradit Control QIL",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 129
+  },
+  {
+    "ext": "3199",
+    "name": "Abu Saleh",
+    "designation": "Manager",
+    "department": "ACCOUNTS",
+    "id": 130
+  },
+  {
+    "ext": "4065",
+    "name": "Murad",
+    "designation": "Jr. Officer",
+    "department": "PROCUREMENT & PURCHASE",
+    "id": 131
+  },
+  {
+    "ext": "3038",
+    "name": "Home Delivary",
+    "designation": "Sales (Hot Line)",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 132
+  },
+  {
+    "ext": "2044",
+    "name": "Ataul Haque Mohon",
+    "designation": "Sr.GM (PIC)",
+    "department": "NANDIGRAM PLANT",
+    "id": 133
+  },
+  {
+    "ext": "3005",
+    "name": "Shah Poran",
+    "designation": "Ex. Officer",
+    "department": "ACCOUNTS",
+    "id": 134
+  },
+  {
+    "ext": "3116",
+    "name": "Touhidul Islam",
+    "designation": "Sales",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 135
+  },
+  {
+    "ext": "3125",
+    "name": "Zahid Chowdhury",
+    "designation": "DPIC",
+    "department": "NANDIGRAM PLANT",
+    "id": 136
+  },
+  {
+    "ext": "3006",
+    "name": "Zahid Islam",
+    "designation": "Sr.Officer",
+    "department": "ACCOUNTS",
+    "id": 137
+  },
+  {
+    "ext": "2006",
+    "name": "Abu Sayed Kallol",
+    "designation": "Sr. AGM",
+    "department": "COMMERCIAL",
+    "id": 138
+  },
+  {
+    "ext": "3033",
+    "name": "Kamal Pasa",
+    "designation": "Sales",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 139
+  },
+  {
+    "ext": "3124",
+    "name": "Shorma",
+    "designation": "GM(Mechanical)",
+    "department": "NANDIGRAM PLANT",
+    "id": 140
+  },
+  {
+    "ext": "4033",
+    "name": "Mahamudul",
+    "designation": "Sr. Officer",
+    "department": "ACCOUNTS",
+    "id": 141
+  },
+  {
+    "ext": "3016",
+    "name": "Mintu",
+    "designation": "Ex Officer",
+    "department": "COMMERCIAL",
+    "id": 142
+  },
+  {
+    "ext": "3157",
+    "name": "Habib",
+    "designation": "Asst. Manager",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 143
+  },
+  {
+    "ext": "3121",
+    "name": "Admin",
+    "designation": "Admin",
+    "department": "NANDIGRAM PLANT",
+    "id": 144
+  },
+  {
+    "ext": "3007",
+    "name": "Munna",
+    "designation": "Officer",
+    "department": "ACCOUNTS",
+    "id": 145
+  },
+  {
+    "ext": "3015",
+    "name": "Jafran",
+    "designation": "Sr. Ex Officer",
+    "department": "COMMERCIAL",
+    "id": 146
+  },
+  {
+    "ext": "4015",
+    "name": "Store (QIL)",
+    "designation": "Head Office",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 147
+  },
+  {
+    "ext": "3120",
+    "name": "Accounts",
+    "designation": "Accounts",
+    "department": "NANDIGRAM PLANT",
+    "id": 148
+  },
+  {
+    "ext": "4099",
+    "name": "Md Sohel",
+    "designation": "jr. Officer",
+    "department": "ACCOUNTS",
+    "id": 149
+  },
+  {
+    "ext": "3017",
+    "name": "Fahad",
+    "designation": "Officer",
+    "department": "COMMERCIAL",
+    "id": 150
+  },
+  {
+    "ext": "3153",
+    "name": "Rahad",
+    "designation": "Admin Factory",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 151
+  },
+  {
+    "ext": "3122",
+    "name": "Sales",
+    "designation": "Sales",
+    "department": "NANDIGRAM PLANT",
+    "id": 152
+  },
+  {
+    "ext": "4059",
+    "name": "Fazle Rabbi",
+    "designation": "Officer",
+    "department": "COMMERCIAL",
+    "id": 153
+  },
+  {
+    "ext": "3151",
+    "name": "Further Process",
+    "designation": "Further Process",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 154
+  },
+  {
+    "ext": "3146",
+    "name": "Rayhan",
+    "designation": "EX.O (Electrical)",
+    "department": "NANDIGRAM PLANT",
+    "id": 155
+  },
+  {
+    "ext": "2012/2013",
+    "name": "Sohel Rana",
+    "designation": "GM",
+    "department": "SALES",
+    "id": 156
+  },
+  {
+    "ext": "3156",
+    "name": "Sales/Store",
+    "designation": "Sales",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 157
+  },
+  {
+    "ext": "3123",
+    "name": "Store",
+    "designation": "Store",
+    "department": "NANDIGRAM PLANT",
+    "id": 158
+  },
+  {
+    "ext": "2060",
+    "name": "Faiz Ahamad",
+    "designation": "AGM",
+    "department": "SALES",
+    "id": 159
+  },
+  {
+    "ext": "3154",
+    "name": "Kornop",
+    "designation": "PP",
+    "department": "QIAL-( H/O & PLANT)",
+    "id": 160
+  },
+  {
+    "ext": "3126",
+    "name": "Mostak Ahamad",
+    "designation": "EX.O Lab",
+    "department": "NANDIGRAM PLANT",
+    "id": 161
+  },
+  {
+    "ext": "3004",
+    "name": "Shultan",
+    "designation": "Ex. Officer",
+    "department": "SALES",
+    "id": 162
+  },
+  {
+    "ext": "2059",
+    "name": "Abdur Rahim",
+    "designation": "GM (Mkt Head)",
+    "department": "MARKETING AFFAIRS",
+    "id": 163
+  },
+  {
+    "ext": "3127",
+    "name": "12th Plant",
+    "designation": "Control Room",
+    "department": "NANDIGRAM PLANT",
+    "id": 164
+  },
+  {
+    "ext": "2025",
+    "name": "Jony",
+    "designation": "Ex. Officer",
+    "department": "SALES",
+    "id": 165
+  },
+  {
+    "ext": "2024",
+    "name": "Dr. Saifur DVM",
+    "designation": "Sr.AGM",
+    "department": "MARKETING AFFAIRS",
+    "id": 166
+  },
+  {
+    "ext": "3170",
+    "name": "Md. Rofiqul Islam",
+    "designation": "FIC-QAL unit-1",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 167
+  },
+  {
+    "ext": "3128",
+    "name": "13th Plant",
+    "designation": "Control Room",
+    "department": "NANDIGRAM PLANT",
+    "id": 168
+  },
+  {
+    "ext": "3002",
+    "name": "Habib",
+    "designation": "Sr. Ex",
+    "department": "SALES",
+    "id": 169
+  },
+  {
+    "ext": "3026",
+    "name": "Ashraf",
+    "designation": "Ass. Manager",
+    "department": "MARKETING AFFAIRS",
+    "id": 170
+  },
+  {
+    "ext": "2055",
+    "name": "Md. Rofiqul Islam",
+    "designation": "FIC-QAL unit-2",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 171
+  },
+  {
+    "ext": "3129",
+    "name": "14th & 15 Plant",
+    "designation": "Control Room",
+    "department": "NANDIGRAM PLANT",
+    "id": 172
+  },
+  {
+    "ext": "3003",
+    "name": "Mujibul",
+    "designation": "Officer",
+    "department": "SALES",
+    "id": 173
+  },
+  {
+    "ext": "3059",
+    "name": "(not listed)",
+    "designation": "",
+    "department": "MARKETING AFFAIRS",
+    "id": 174
+  },
+  {
+    "ext": "2010",
+    "name": "Amjad Hossain",
+    "designation": "DGM (H/O)",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 175
+  },
+  {
+    "ext": "3134",
+    "name": "Engineering Store",
+    "designation": "Store",
+    "department": "NANDIGRAM PLANT",
+    "id": 176
+  },
+  {
+    "ext": "4034",
+    "name": "Rahat",
+    "designation": "Officer",
+    "department": "SALES",
+    "id": 177
+  },
+  {
+    "ext": "3196",
+    "name": "Dr. Didar",
+    "designation": "Ass. Manager",
+    "department": "MARKETING AFFAIRS",
+    "id": 178
+  },
+  {
+    "ext": "2041",
+    "name": "Rubal Rana",
+    "designation": "Manager (H/O)",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 179
+  },
+  {
+    "ext": "3130",
+    "name": "16th & 17th Plant",
+    "designation": "Control Room",
+    "department": "NANDIGRAM PLANT",
+    "id": 180
+  },
+  {
+    "ext": "4042",
+    "name": "Maruful",
+    "designation": "Manager",
+    "department": "MARKETING AFFAIRS",
+    "id": 181
+  },
+  {
+    "ext": "2052",
+    "name": "Banazir Ahamed",
+    "designation": "Oparetion",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 182
+  },
+  {
+    "ext": "3131",
+    "name": "Audit Nandigram",
+    "designation": "Audit",
+    "department": "NANDIGRAM PLANT",
+    "id": 183
+  },
+  {
+    "ext": "2030",
+    "name": "Subrata Kumar",
+    "designation": "Sr.Manager",
+    "department": "CREDIT CONTROL",
+    "id": 184
+  },
+  {
+    "ext": "3053",
+    "name": "Jubair",
+    "designation": "Sr. Ex. Office",
+    "department": "MARKETING AFFAIRS",
+    "id": 185
+  },
+  {
+    "ext": "3149",
+    "name": "Tashiqul (H/O)",
+    "designation": "Ex. Officer (A/C)",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 186
+  },
+  {
+    "ext": "3133",
+    "name": "Manik Hossain",
+    "designation": "Officer-IT",
+    "department": "NANDIGRAM PLANT",
+    "id": 187
+  },
+  {
+    "ext": "3050",
+    "name": "Moin",
+    "designation": "Ex. Officer",
+    "department": "CREDIT CONTROL",
+    "id": 188
+  },
+  {
+    "ext": "3012",
+    "name": "Jony",
+    "designation": "Officer",
+    "department": "MARKETING AFFAIRS",
+    "id": 189
+  },
+  {
+    "ext": "3039",
+    "name": "Saydur",
+    "designation": "Admin Officer",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 190
+  },
+  {
+    "ext": "3132",
+    "name": "Workshop -",
+    "designation": "Nandigram",
+    "department": "NANDIGRAM PLANT",
+    "id": 191
+  },
+  {
+    "ext": "3051",
+    "name": "Sobuj",
+    "designation": "Ex. Officer",
+    "department": "CREDIT CONTROL",
+    "id": 192
+  },
+  {
+    "ext": "4030",
+    "name": "Mithul",
+    "designation": "Officer",
+    "department": "MARKETING AFFAIRS",
+    "id": 193
+  },
+  {
+    "ext": "3172",
+    "name": "Harun Or Rashid",
+    "designation": "P.Ex. Officer/AC",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 194
+  },
+  {
+    "ext": "3197",
+    "name": "Habib",
+    "designation": "Officer",
+    "department": "CREDIT CONTROL",
+    "id": 195
+  },
+  {
+    "ext": "4049",
+    "name": "Shuvo",
+    "designation": "Jr.Officer",
+    "department": "MARKETING AFFAIRS",
+    "id": 196
+  },
+  {
+    "ext": "3171",
+    "name": "Admin-QAL Unit-01",
+    "designation": "Admin",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 197
+  },
+  {
+    "ext": "2055",
+    "name": "Rofiqul Islam",
+    "designation": "FIC",
+    "department": "QAL Unit- 2",
+    "id": 198
+  },
+  {
+    "ext": "3036",
+    "name": "Biplob",
+    "designation": "Officer",
+    "department": "MARKETING AFFAIRS",
+    "id": 199
+  },
+  {
+    "ext": "3173",
+    "name": "Sales -QAL U-1",
+    "designation": "Sales",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 200
+  },
+  {
+    "ext": "2052",
+    "name": "Banazir Ahamed",
+    "designation": "Operations",
+    "department": "QAL Unit- 2",
+    "id": 201
+  },
+  {
+    "ext": "3025",
+    "name": "Mahabubul Islam",
+    "designation": "Sr. AGM",
+    "department": "IT",
+    "id": 202
+  },
+  {
+    "ext": "2047",
+    "name": "Hasan",
+    "designation": "Jr.Officer",
+    "department": "MARKETING AFFAIRS",
+    "id": 203
+  },
+  {
+    "ext": "3175",
+    "name": "Store QAL (U-1)",
+    "designation": "Plant",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 204
+  },
+  {
+    "ext": "3180",
+    "name": "Rakibul Islam",
+    "designation": "Production -1",
+    "department": "QAL Unit- 2",
+    "id": 205
+  },
+  {
+    "ext": "2031",
+    "name": "Zohirul Islam(Design)",
+    "designation": "Sr.Manager",
+    "department": "IT",
+    "id": 206
+  },
+  {
+    "ext": "3174",
+    "name": "Audit QAL (U-1)",
+    "designation": "Plant",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 207
+  },
+  {
+    "ext": "3194",
+    "name": "Md. Razvi",
+    "designation": "Admin",
+    "department": "QAL Unit- 2",
+    "id": 208
+  },
+  {
+    "ext": "2011",
+    "name": "Mazarul Islam Sogir",
+    "designation": "Ass. Manager",
+    "department": "IT",
+    "id": 209
+  },
+  {
+    "ext": "2015",
+    "name": "Tamal Hasan",
+    "designation": "GM",
+    "department": "CORPORATE AFFAIRS",
+    "id": 210
+  },
+  {
+    "ext": "3176",
+    "name": "Security QAL (U-1)",
+    "designation": "Plant",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 211
+  },
+  {
+    "ext": "3181",
+    "name": "Md. Fazlul",
+    "designation": "Admin",
+    "department": "QAL Unit- 2",
+    "id": 212
+  },
+  {
+    "ext": "3013",
+    "name": "IT Support",
+    "designation": "Help Desk",
+    "department": "IT",
+    "id": 213
+  },
+  {
+    "ext": "3009",
+    "name": "Abir",
+    "designation": "Ex. Officer",
+    "department": "CORPORATE AFFAIRS",
+    "id": 214
+  },
+  {
+    "ext": "3113",
+    "name": "Al-Amin",
+    "designation": "Plant",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 215
+  },
+  {
+    "ext": "3182",
+    "name": "Toriqul Islam",
+    "designation": "Accounts",
+    "department": "QAL Unit- 2",
+    "id": 216
+  },
+  {
+    "ext": "2049",
+    "name": "Soriful",
+    "designation": "Sr. Ex Officer",
+    "department": "IT",
+    "id": 217
+  },
+  {
+    "ext": "3208",
+    "name": "Zawed",
+    "designation": "Jr. Officer",
+    "department": "CORPORATE AFFAIRS",
+    "id": 218
+  },
+  {
+    "ext": "3290",
+    "name": "Gouranga Kumar",
+    "designation": "Electrical",
+    "department": "QAL-(Quality Aquabreeds Ltd.) [ H/O & PLANT ]",
+    "id": 219
+  },
+  {
+    "ext": "3183",
+    "name": "Ansar Ali",
+    "designation": "Sales",
+    "department": "QAL Unit- 2",
+    "id": 220
+  },
+  {
+    "ext": "3014",
+    "name": "Zahid(Design)",
+    "designation": "EX. Officer",
+    "department": "IT",
+    "id": 221
+  },
+  {
+    "ext": "4032",
+    "name": "Shoaib",
+    "designation": "Officer",
+    "department": "CORPORATE AFFAIRS",
+    "id": 222
+  },
+  {
+    "ext": "3184",
+    "name": "Robiul Alom",
+    "designation": "Audit",
+    "department": "QAL Unit- 2",
+    "id": 223
+  },
+  {
+    "ext": "3041",
+    "name": "Maruf (Soft)",
+    "designation": "Sr. Officer",
+    "department": "IT",
+    "id": 224
+  },
+  {
+    "ext": "2051",
+    "name": "Banazir Ahamed",
+    "designation": "FIC",
+    "department": "QLL",
+    "id": 225
+  },
+  {
+    "ext": "3185",
+    "name": "Abu Rayhan",
+    "designation": "Store",
+    "department": "QAL Unit- 2",
+    "id": 226
+  },
+  {
+    "ext": "2050",
+    "name": "Lutfor Rahman(soft)",
+    "designation": "Officer",
+    "department": "IT",
+    "id": 227
+  },
+  {
+    "ext": "2026",
+    "name": "Zahirul Islam",
+    "designation": "AGM",
+    "department": "Secretarial, Shares and Compliance",
+    "id": 228
+  },
+  {
+    "ext": "2035",
+    "name": "Abu Helal",
+    "designation": "AIC",
+    "department": "QLL",
+    "id": 229
+  },
+  {
+    "ext": "3186",
+    "name": "Gate",
+    "designation": "Gate",
+    "department": "QAL Unit- 2",
+    "id": 230
+  },
+  {
+    "ext": "4095",
+    "name": "Rezuyan",
+    "designation": "Ofiicer",
+    "department": "IT",
+    "id": 231
+  },
+  {
+    "ext": "4022",
+    "name": "Faisal Nazir",
+    "designation": "Ex. Officer",
+    "department": "Secretarial, Shares and Compliance",
+    "id": 232
+  },
+  {
+    "ext": "4055",
+    "name": "Accounts",
+    "designation": "HO",
+    "department": "QLL",
+    "id": 233
+  },
+  {
+    "ext": "3187",
+    "name": "Rezaul Karim",
+    "designation": "production-2",
+    "department": "QAL Unit- 2",
+    "id": 234
+  },
+  {
+    "ext": "4068",
+    "name": "Mubarak",
+    "designation": "Ofiicer",
+    "department": "IT",
+    "id": 235
+  },
+  {
+    "ext": "4031",
+    "name": "Asif",
+    "designation": "Officer",
+    "department": "Secretarial, Shares and Compliance",
+    "id": 236
+  },
+  {
+    "ext": "4080",
+    "name": "Rabbi",
+    "designation": "Admin-Farm",
+    "department": "QLL",
+    "id": 237
+  },
+  {
+    "ext": "3188",
+    "name": "Feroj Mahmud",
+    "designation": "Accounts-2",
+    "department": "QAL Unit- 2",
+    "id": 238
+  },
+  {
+    "ext": "4069",
+    "name": "Jewel",
+    "designation": "Sr. Ex. Ofiicer",
+    "department": "IT",
+    "id": 239
+  },
+  {
+    "ext": "4084",
+    "name": "Audit",
+    "designation": "Farm",
+    "department": "QLL",
+    "id": 240
+  },
+  {
+    "ext": "3189",
+    "name": "Process Plant",
+    "designation": "Process Plant",
+    "department": "QAL Unit- 2",
+    "id": 241
+  },
+  {
+    "ext": "4077",
+    "name": "Adib",
+    "designation": "Ofiicer",
+    "department": "IT",
+    "id": 242
+  },
+  {
+    "ext": "4064",
+    "name": "Md. Minhaz",
+    "designation": "Jr. Officer",
+    "department": "QLL",
+    "id": 243
+  },
+  {
+    "ext": "4041",
+    "name": "Romajule",
+    "designation": "Procurement",
+    "department": "QAL Unit- 2",
+    "id": 244
+  },
+  {
+    "ext": "3008",
+    "name": "Monir Hossain",
+    "designation": "Sr. Ex. Officer",
+    "department": "HR",
+    "id": 245
+  },
+  {
+    "ext": "4020",
+    "name": "Office",
+    "designation": "P.P Office",
+    "department": "QAL Unit- 2",
+    "id": 246
+  },
+  {
+    "ext": "2009",
+    "name": "Abdur Rakib Bhuyan",
+    "designation": "GM",
+    "department": "Transport",
+    "id": 247
+  },
+  {
+    "ext": "3001",
+    "name": "Shovon",
+    "designation": "Ex. Officer",
+    "department": "HR",
+    "id": 248
+  },
+  {
+    "ext": "4005/4002",
+    "name": "Liton (Store)",
+    "designation": "Store Sup.",
+    "department": "KITCHEN & STORE",
+    "id": 249
+  },
+  {
+    "ext": "4021",
+    "name": "Boring Room",
+    "designation": "P.P Office",
+    "department": "QAL Unit- 2",
+    "id": 250
+  },
+  {
+    "ext": "2058",
+    "name": "Mahabub",
+    "designation": "Sr. Ex. Officer",
+    "department": "Transport",
+    "id": 251
+  },
+  {
+    "ext": "4061",
+    "name": "Arafat",
+    "designation": "Jr. Officer",
+    "department": "HR",
+    "id": 252
+  },
+  {
+    "ext": "4003",
+    "name": "Office-01 (H-14)",
+    "designation": "Kajol /Kitchen",
+    "department": "KITCHEN & STORE",
+    "id": 253
+  },
+  {
+    "ext": "4075",
+    "name": "FP Babu",
+    "designation": "P.P Office",
+    "department": "QAL Unit- 2",
+    "id": 254
+  },
+  {
+    "ext": "3032",
+    "name": "Liton",
+    "designation": "Sr. Officer",
+    "department": "Transport",
+    "id": 255
+  },
+  {
+    "ext": "3201",
+    "name": "Hamza",
+    "designation": "Supervisor - HR",
+    "department": "HR",
+    "id": 256
+  },
+  {
+    "ext": "4004",
+    "name": "Q-Kitchen",
+    "designation": "Staff + Cook",
+    "department": "KITCHEN & STORE",
+    "id": 257
+  },
+  {
+    "ext": "3113",
+    "name": "Al-Amin",
+    "designation": "IT",
+    "department": "QAL Unit- 2",
+    "id": 258
+  },
+  {
+    "ext": "3202",
+    "name": "Saidul",
+    "designation": "Officer - HR",
+    "department": "HR",
+    "id": 259
+  },
+  {
+    "ext": "4006",
+    "name": "Office-04 James(H-12)",
+    "designation": "Dir. Kitchen",
+    "department": "KITCHEN & STORE",
+    "id": 260
+  },
+  {
+    "ext": "2070",
+    "name": "Jasim Uddin Biplob",
+    "designation": "AD-QHL",
+    "department": "Q-Center",
+    "id": 261
+  },
+  {
+    "ext": "3203",
+    "name": "Sabbir",
+    "designation": "Officer - HR",
+    "department": "HR",
+    "id": 262
+  },
+  {
+    "ext": "4007",
+    "name": "A/C Building (H-16)",
+    "designation": "A/C Kitchen",
+    "department": "KITCHEN & STORE",
+    "id": 263
+  },
+  {
+    "ext": "3140",
+    "name": "Dr. Md. Saddam",
+    "designation": "DGM- FIC",
+    "department": "QBL Farm",
+    "id": 264
+  },
+  {
+    "ext": "4024",
+    "name": "Engineer Alauddin",
+    "designation": "Ass. Manager",
+    "department": "Q-Center",
+    "id": 265
+  },
+  {
+    "ext": "3204",
+    "name": "Asad",
+    "designation": "Ex. Officer-Training",
+    "department": "HR",
+    "id": 266
+  },
+  {
+    "ext": "4016",
+    "name": "Audit Building (H-57)",
+    "designation": "Audit Kitchen",
+    "department": "KITCHEN & STORE",
+    "id": 267
+  },
+  {
+    "ext": "3141",
+    "name": "Md. Nazmul Hoque",
+    "designation": "Jr. Officer- Admin",
+    "department": "QBL Farm",
+    "id": 268
+  },
+  {
+    "ext": "4023",
+    "name": "Q-Center Admin",
+    "designation": "Officer",
+    "department": "Q-Center",
+    "id": 269
+  },
+  {
+    "ext": "4074",
+    "name": "Usuf",
+    "designation": "MT - HR",
+    "department": "HR",
+    "id": 270
+  },
+  {
+    "ext": "4000",
+    "name": "Sales- Kitchen",
+    "designation": "Sales & IT",
+    "department": "KITCHEN & STORE",
+    "id": 271
+  },
+  {
+    "ext": "3142",
+    "name": "Md. Rabiul Islam",
+    "designation": "Jr.Officer- Store",
+    "department": "QBL Farm",
+    "id": 272
+  },
+  {
+    "ext": "4029",
+    "name": "Coordinator",
+    "designation": "Ast. Maneger",
+    "department": "Q-Center",
+    "id": 273
+  },
+  {
+    "ext": "4013",
+    "name": "QLL Building(H-12)",
+    "designation": "HR & Software & QLL",
+    "department": "KITCHEN & STORE",
+    "id": 274
+  },
+  {
+    "ext": "3143",
+    "name": "Gate- 01",
+    "designation": "Security",
+    "department": "QBL Farm",
+    "id": 275
+  },
+  {
+    "ext": "4035",
+    "name": "Abul Kalam",
+    "designation": "Sr. Manager",
+    "department": "Q-Center",
+    "id": 276
+  },
+  {
+    "ext": "3144",
+    "name": "Gate- 02",
+    "designation": "Security",
+    "department": "QBL Farm",
+    "id": 277
+  },
+  {
+    "ext": "4058",
+    "name": "Imran",
+    "designation": "Officer",
+    "department": "Q-Center",
+    "id": 278
+  },
+  {
+    "ext": "4008",
+    "name": "Office-01 (H- 14)",
+    "designation": "Security",
+    "department": "SECURITY GUARD",
+    "id": 279
+  },
+  {
+    "ext": "3147",
+    "name": "Saidur Rahman",
+    "designation": "Officer",
+    "department": "QBL Farm-Unit-2",
+    "id": 280
+  },
+  {
+    "ext": "3145",
+    "name": "Sub Station",
+    "designation": "Electrician",
+    "department": "QBL Farm",
+    "id": 281
+  },
+  {
+    "ext": "4009",
+    "name": "Office-02 (H- 18)",
+    "designation": "Sec. / Driver",
+    "department": "SECURITY GUARD",
+    "id": 282
+  },
+  {
+    "ext": "4026",
+    "name": "Md, Jahidul Islam",
+    "designation": "Officer",
+    "department": "Q - KITCHEN",
+    "id": 283
+  },
+  {
+    "ext": "4010",
+    "name": "Office- (H- 57)",
+    "designation": "Security",
+    "department": "SECURITY GUARD",
+    "id": 284
+  },
+  {
+    "ext": "4025",
+    "name": "Sourob",
+    "designation": "Q-Kitchen",
+    "department": "Q - KITCHEN",
+    "id": 285
+  },
+  {
+    "ext": "4011",
+    "name": "Office-04 (H- 49)",
+    "designation": "Security",
+    "department": "SECURITY GUARD",
+    "id": 286
+  },
+  {
+    "ext": "4040",
+    "name": "The Big Q",
+    "designation": "Kitchen",
+    "department": "Q - KITCHEN",
+    "id": 287
+  },
+  {
+    "ext": "4012",
+    "name": "Office-05 (H- 45)",
+    "designation": "Security",
+    "department": "SECURITY GUARD",
+    "id": 288
+  }
+]
